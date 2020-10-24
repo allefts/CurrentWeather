@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: darkslategray;
+  background: url("./assets/cloudy.jpg") no-repeat center center fixed;
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 
 :root {
   --underline-color: #ce3659;
-  --modal-background-color: rgba(255, 255, 255, 0.2);
+  --modal-background-color: rgba(255, 255, 255, 0.3);
   --location-font-size: 4rem;
   --temp-font-size: 3rem;
   --other-font-size: 2rem;
@@ -27,17 +27,15 @@ html {
   flex-flow: column;
   background-color: var(--modal-background-color);
   max-width: 30em;
-  margin: 5rem 3rem;
+  margin: 5rem auto;
   height: 80vh;
-  border-radius: var(--modal-border);
-  border: 2px solid white;
   text-align: center;
 }
 
 .location {
   display: inline-block;
   text-align: center;
-  margin: 3rem;
+  margin: 4rem 4rem 0 4rem;
   font-size: var(--other-font-size);
 }
 
@@ -46,9 +44,24 @@ html {
   font-size: var(--temp-font-size);
 }
 
-.feelsLike {
-  font-size: 1rem;
+.feelslikeWrapper {
+  position: relative;
+  font-size: 1.5rem;
+  margin: 3rem;
 }
 
-.mainWrapper {
+.feelsLike {
+  position: absolute;
+  left: 10px;
+  opacity: 0.7;
+}
+
+.mainWeather {
+  margin: 5rem 0;
+}
+.line {
+  width: 80%;
+  margin: 0 auto 1rem auto;
+  height: 1px;
+  background-color: blue;
 }

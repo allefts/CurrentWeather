@@ -13,6 +13,8 @@ class Weather extends React.Component {
     description: null,
     mainWeather: null,
     location: null,
+    icon: null,
+    backgroundPic: null,
   };
 
   //ON RENDER, CALL THE API AND RECEIVE THE WEATHER OBJECT BACK
@@ -32,12 +34,16 @@ class Weather extends React.Component {
         });
       });
   }
+
   render() {
-    let degrees = <span style={{ marginLeft: ".25rem" }}>&#176;F</span>;
+    const degrees = <span style={{ marginLeft: ".25rem" }}>&#176;F</span>;
+    const icons = [<FiSun />, <IoIosRainy />, <TiWeatherCloudy />];
+
     return (
       <div>
         <div className="informationWrapper">
-          <h2 className="location">{this.state.location}</h2>
+          <h2 className="location">{this.state.location}, TX</h2>
+          <div className="line"></div>
           <div className="informationContainer">
             <div className="tempWrapper">
               <h1 className="temp">
@@ -46,10 +52,9 @@ class Weather extends React.Component {
                   {degrees}
                 </span>
               </h1>
-              <h3 className="feelslike">
+              <h3 className="feelslikeWrapper">
                 <span className="feelsLike">Feels like:</span>
                 {this.state.feelsLike}
-
                 {degrees}
               </h3>
             </div>
