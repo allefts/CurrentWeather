@@ -1,38 +1,54 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fjalla One", sans-serif;
+}
+
+body {
+  background-color: darkslategray;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --underline-color: #ce3659;
+  --modal-background-color: rgba(255, 255, 255, 0.2);
+  --location-font-size: 4rem;
+  --temp-font-size: 3rem;
+  --other-font-size: 2rem;
+  --modal-border: 2%;
+}
+
+.informationWrapper {
+  display: flex;
+  flex-flow: column;
+  background-color: var(--modal-background-color);
+  max-width: 30em;
+  margin: 5rem 3rem;
+  height: 80vh;
+  border-radius: var(--modal-border);
+  border: 2px solid white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.location {
+  display: inline-block;
+  text-align: center;
+  margin: 3rem;
+  font-size: var(--other-font-size);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.temp {
+  margin: 1rem;
+  font-size: var(--temp-font-size);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.feelsLike {
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainWrapper {
 }
