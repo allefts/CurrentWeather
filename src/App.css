@@ -6,7 +6,8 @@
 }
 
 body {
-  background: url("./assets/cloudy.jpg") no-repeat center center fixed;
+  background: url("./assets/rain.jpg") no-repeat center center fixed;
+  color: #2f1464;
 }
 
 html {
@@ -15,7 +16,7 @@ html {
 
 :root {
   --underline-color: #ce3659;
-  --modal-background-color: rgba(255, 255, 255, 0.3);
+  --modal-background-color: rgba(255, 255, 255, 0.7);
   --location-font-size: 4rem;
   --temp-font-size: 3rem;
   --other-font-size: 2rem;
@@ -64,4 +65,8 @@ html {
   margin: 0 auto 1rem auto;
   height: 1px;
   background-color: blue;
+}
+
+.iconWrapper {
+  font-size: 5rem;
 }
